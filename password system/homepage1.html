@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset = "UTF-8">
+ <title>HospWebProject</title>
+ <link rel = "stylesheet"
+   type = "text/css"
+   href = "homepage.css" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="navigation">
+	<div class="navigation-left">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ3AzMaUZKkql48aE2P3Mzl8EcDGdLH7XGxaiyML-8OXjoenPv" style="width:50%" alt="">
+  </div>
+
+<div class="topnav" id="myTopnav">
+  <div class="navigation-left">
+   <a href="patientlogin.php">Doctor</a>
+   <a href="patientlogin.php">Reservation</a>
+   <a href="#">About us</a>
+   <a href="#">Contact Us</a>
+  </div>
+  </div>
+  
+  <div class="navigation-right">
+    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmEuzdvntu3Rykmi26kcmFEFVR_O199P-TXmjLB_uCqtTpfHI3eA" style="width:30%" alt=""></a>
+  <a href="http://localhost/DENO/doctologin.php"><button class="login-btn">login/sign up</button></a>
+  </div>
+</div>
+ 
+<!-- Slider Wrapper -->
+<div class="css-slider-wrapper">
+  <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
+  <input type="radio" name="slider" class="slide-radio2" id="slider_2">
+  <input type="radio" name="slider" class="slide-radio3" id="slider_3">
+  <input type="radio" name="slider" class="slide-radio4" id="slider_4">
+ 
+  <!-- Slider Pagination -->
+  <div class="slider-pagination">
+    <label for="slider_1" class="page1"></label>
+    <label for="slider_2" class="page2"></label>
+    <label for="slider_3" class="page3"></label>
+    <label for="slider_4" class="page4"></label>
+  </div>
+ 
+  <!-- Slider #1 -->
+  <div class="slider slide-1">
+    <img src="https://previews.123rf.com/images/franckito/franckito1106/franckito110600100/9800425-3D-rendering-of-a-hospital-interior-Stock-Photo-hospital-corridor.jpg" alt="">
+
+    <div class="slider-content">
+      <h4>Hospital Website</h4>
+      <h2>Your Healthy Body Is Our Priority.</h2>
+      <button type="button" class="buy-now-btn" name="button" onclick="window.location.href='/p'"></a>doctors login</button>
+    </div>
+    <div class="number-pagination">
+      <span>1</span>
+    </div>
+  </div>
+ 
+  <!-- Slider #2 -->
+  <div class="slider slide-2">
+    <img src="https://s-media-cache-ak0.pinimg.com/originals/e6/45/cd/e645cd0bfd434e768b2bbf4931d23747.jpg" alt="">
+    <div class="slider-content">
+      <h4>Hospital Website</h4>
+      <h2>Hygiene and living right keeps off disease.</h2>
+      <button type="button" class="buy-now-btn" name="button">patients login</button>
+    </div>
+    <div class="number-pagination">
+      <span>2</span>
+    </div>
+  </div>
+ 
+  <!-- Slider #3 -->
+  <div class="slider slide-3">
+    <img src="https://s-media-cache-ak0.pinimg.com/736x/41/ed/41/41ed413a1bc9d2fe21b4d63a6f39cab5.jpg" alt="">
+    <div class="slider-content">
+      <h4>Hospital Website</h4>
+      <h2>Free consoltations with the doctor</h2>
+      <button type="button" class="buy-now-btn" name="button">About us</button>
+    </div>
+    <div class="number-pagination">
+      <span>3</span>
+    </div>
+  </div>
+ 
+  <!-- Slider #4 -->
+  <div class="slider slide-4">
+    <img src="http://1.bp.blogspot.com/-nJZKGNC4AEk/VAVPkTuQD6I/AAAAAAAABeI/ky6h3kEUlpk/s1600/1hospital1.jpg" alt="">
+    <div class="slider-content">
+      <h4>Hospital Website</h4>
+      <h2>Open to all students and public throughout the week</h2>
+      <button type="button" class="buy-now-btn" name="button">contact us</button>
+    </div>
+    <div class="number-pagination">
+      <span>4</span>
+    </div>
+  </div>
+</div>
+<script> 
+var TIMEOUT = 5000;
+ 
+var interval = setInterval(handleNext, TIMEOUT);
+ 
+function handleNext() {
+ 
+  var $radios = $('input[class*="slide-radio"]');
+  var $activeRadio = $('input[class*="slide-radio"]:checked');
+ 
+  var currentIndex = $activeRadio.index();
+  var radiosLength = $radios.length;
+ 
+  $radios
+    .attr('checked', false);
+ 
+  if (currentIndex >= radiosLength - 1) {
+ 
+    $radios
+      .first()
+      .attr('checked', true);
+ 
+  } else {
+ 
+    $activeRadio
+      .next('input[class*="slide-radio"]')
+      .attr('checked', true);
+ 
+  }
+ 
+}
+
+</script>
+</body>
+</html>
+ 
