@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset = "UTF-8">
+ <title>password management system</title>
+ <link rel = "stylesheet"
+   type = "text/css"
+   href = "homepage.css" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="navigation">
+	<div class="navigation-left">
+  </div>
+
+<div class="topnav" id="myTopnav">
+  <div class="navigation-left">
+   <a href="userlogin.php">library</a>
+   <a href="userlogin.php">add library</a>
+   <a href="#">About us</a>
+   <a href="#">Contact Us</a>
+  </div>
+  </div>
+  
+  <div class="navigation-right">
+  <a href="http://localhost/DENO/doctologin.php"><button class="login-btn">login/sign up</button></a>
+  </div>
+</div>
+ 
+<!-- Slider Wrapper -->
+<div class="css-slider-wrapper">
+  <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
+  <input type="radio" name="slider" class="slide-radio2" id="slider_2">
+  <input type="radio" name="slider" class="slide-radio3" id="slider_3">
+  <input type="radio" name="slider" class="slide-radio4" id="slider_4">
+ 
+  <!-- Slider Pagination -->
+  <div class="slider-pagination">
+    <label for="slider_1" class="page1"></label>
+    <label for="slider_2" class="page2"></label>
+    <label for="slider_3" class="page3"></label>
+    <label for="slider_4" class="page4"></label>
+  </div>
+ 
+  <!-- Slider #1 -->
+  <div class="slider slide-1">
+    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--SGs2aMWj--/c_scale,f_auto,fl_progressive,q_80,w_800/jgpeuoavmn7pwbh98ycs.jpg" alt="">
+
+    <div class="slider-content">
+      <h4>password management system</h4>
+      <h2>Your passwords are secure.</h2>
+      <button type="button" class="buy-now-btn" name="button" onclick="window.location.href='/p'"></a>user login</button>
+    </div>
+    <div class="number-pagination">
+      <span>1</span>
+    </div>
+  </div>
+ 
+  <!-- Slider #2 -->
+  <div class="slider slide-2">
+    <img src="https://st3.depositphotos.com/7417846/15439/i/1600/depositphotos_154392126-stock-photo-hacker-tries-to-enter-the.jpg" alt="">
+    <div class="slider-content">
+      <h4>password management system</h4>
+      <h2>add more libraries with us.</h2>
+      <button type="button" class="buy-now-btn" name="button">patients login</button>
+    </div>
+    <div class="number-pagination">
+      <span>2</span>
+    </div>
+  </div>
+ 
+  <!-- Slider #3 -->
+  <div class="slider slide-3">
+    <img src="https://images.techhive.com/images/article/2016/08/snow-globe-shake-100677343-carousel.idge.jpg" alt="">
+    <div class="slider-content">
+      <h4>password manangement website</h4>
+      <h2>great security features</h2>
+      <button type="button" class="buy-now-btn" name="button">About us</button>
+    </div>
+    <div class="number-pagination">
+      <span>3</span>
+    </div>
+  </div>
+ 
+  <!-- Slider #4 -->
+  <div class="slider slide-4">
+    <img src="https://www.york.ac.uk/media/study/courses/postgraduate/computerscience/cyber-banner.jpg" alt="">
+    <div class="slider-content">
+      <h4>password management system</h4>
+      <h2>security is our priority</h2>
+      <button type="button" class="buy-now-btn" name="button">contact us</button>
+    </div>
+    <div class="number-pagination">
+      <span>4</span>
+    </div>
+  </div>
+</div>
+<script> 
+var TIMEOUT = 5000;
+ 
+var interval = setInterval(handleNext, TIMEOUT);
+ 
+function handleNext() {
+ 
+  var $radios = $('input[class*="slide-radio"]');
+  var $activeRadio = $('input[class*="slide-radio"]:checked');
+ 
+  var currentIndex = $activeRadio.index();
+  var radiosLength = $radios.length;
+ 
+  $radios
+    .attr('checked', false);
+ 
+  if (currentIndex >= radiosLength - 1) {
+ 
+    $radios
+      .first()
+      .attr('checked', true);
+ 
+  } else {
+ 
+    $activeRadio
+      .next('input[class*="slide-radio"]')
+      .attr('checked', true);
+ 
+  }
+ 
+}
+
+</script>
+</body>
+</html>
+ 
